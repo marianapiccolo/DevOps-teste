@@ -1,0 +1,22 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.pem
+
+# Backup
+*.backup
+
+# IDEs e sistema
+.vscode/
+.idea/
+.DS_Store
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.backup
+*.pem
+.vscode/
+.DS_Store
