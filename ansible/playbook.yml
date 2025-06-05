@@ -1,0 +1,26 @@
+---
+- name: Configurar EC2 com AWS CLI e Nginx
+  hosts: web
+  become: yes
+
+  tasks:
+    - name: Atualizar pacotes
+      apt:
+        update_cache: yes
+        upgrade: dist
+
+    - name: Instalar AWS CLI
+      apt:
+        name: awscli
+        state: present
+
+    - name: Instalar Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Iniciar e habilitar o Nginx
+      systemd:
+        name: nginx
+        state: started
+        enabled: yes
