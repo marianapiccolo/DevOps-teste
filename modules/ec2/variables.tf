@@ -23,3 +23,9 @@ variable "subnet_id" {
   description = "ID da subnet onde a EC2 será lançada"
   type        = string
 }
+
+variable "security_group_ids" {
+  description = "Lista de IDs dos Security Groups"
+  type        = list(string)
+  default     = []
+}
