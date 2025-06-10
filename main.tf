@@ -5,7 +5,7 @@ provider "aws" {
 module "security_group" {
   source  = "./modules/security_group"
   vpc_id  = module.vpc.vpc_id
-  sg_name = "sg-backoffice"
+  sg_name = "backoffice-sg"
 }
 
 module "ec2" {

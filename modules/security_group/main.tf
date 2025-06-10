@@ -1,4 +1,4 @@
-resource "aws_security_group" "sg" {
+resource "aws_security_group" "sg_backend" {
   name        = var.sg_name
   description = "Security group para acesso SSH, HTTP e HTTPS"
   vpc_id      = var.vpc_id
@@ -28,7 +28,7 @@ resource "aws_security_group" "sg" {
   }
 
   egress {
-    description = "Todo tráfego permitido para fora"
+    description = "Allow all outbound traffic"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
